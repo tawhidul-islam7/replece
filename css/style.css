@@ -1,0 +1,136 @@
+body, html {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  background: love-container;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.container {
+  text-align: center;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  width: 90%;
+  max-width: 500px;
+}
+
+input, select, button,output {
+  padding: 10px;
+  margin: 10px;
+  font-size: 16px;
+  width: 80%;
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
+#output {
+  padding: 15px;
+  margin: 43px;
+  font-size: 16px;
+  width: 80%;
+  max-height: 250px;
+  overflow-y: auto;
+  overflow-x: auto;
+  border: 1.5px solid #ccc;
+  margin-top: 20px!important;
+}
+#output p {
+  font-size: 18px;
+  margin: 5px 0;
+  /* white-space: nowrap; */
+  overflow: hidden;
+  border-right: 2px solid #333;
+  animation: typing 1s steps(20, end), blink 0.5s step-end infinite;
+}
+
+
+/* @keyframes typing {
+  from { width: 0 }
+  to { width: 100% } */
+/* } */
+
+ /* @keyframes blink { */
+  /* 50% { border-color: transparent } */
+/* } */
+
+/* Background effect container */
+.background-effect {
+  position: fixed; /* 🔥 stays in background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none; /* so it doesn't block clicks */
+}
+
+/* Floating icons */
+.background-effect span {
+  position: absolute;
+  font-size: 2em;
+  animation: floatHeart 10s infinite ease-in-out;
+  opacity: 0.5;
+  color: #ff3366;
+}
+
+/* Random positions */
+.background-effect span:nth-child(1) { left: 10%; animation-delay: 0s; }
+.background-effect span:nth-child(2) { left: 30%; animation-delay: 2s; }
+.background-effect span:nth-child(3) { left: 50%; animation-delay: 4s; }
+.background-effect span:nth-child(4) { left: 70%; animation-delay: 6s; }
+.background-effect span:nth-child(1) { left: 10%; animation-delay: 1s; }
+.background-effect span:nth-child(2) { left: 30%; animation-delay: 1.5s; }
+.background-effect span:nth-child(3) { left: 50%; animation-delay: 3s; }
+.background-effect span:nth-child(4) { left: 70%; animation-delay: 3.4s; }
+.background-effect span:nth-child(5) { left: 10%; animation-delay: 5s; }
+.background-effect span:nth-child(6) { left: 30%; animation-delay: 5.5s; }
+.background-effect span:nth-child(7) { left: 50%; animation-delay: 4.5s; }
+.background-effect span:nth-child(8) { left: 70%; animation-delay: 6.5s; }
+
+/* Floating animation */
+@keyframes floatHeart {
+  0% {
+    top: 100%;
+    transform: scale(0.5) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+    70% {
+    opacity: 1;
+  }  60% {
+    opacity: 1;
+  }
+  100% {
+    top: -10%;
+    transform: scale(1.2) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Main content stays above */
+.main-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-top: 100px;
+}
